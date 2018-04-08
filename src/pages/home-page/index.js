@@ -1,15 +1,19 @@
 import * as React from 'react';
 
 import Page from 'Pages/page';
+import BertaSays from 'Components/berta-says';
 
-import BertaHead from 'Berta/BERTA.png'
+import styles from './styles.css';
 
 class HomePage extends React.PureComponent {
   render() {
     return (
       <Page>
-        Hi! I'm Berta the Dog!
-        <img src={BertaHead} />
+        <div className={styles.content}>
+          <BertaSays
+            phrase="Hi! I'm Berta the Dog!"
+          />
+        </div>
       </Page>
     );
   }

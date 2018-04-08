@@ -1,11 +1,33 @@
 :global(:root) {
   --body-color: #fff;
+  --bubbles-color: #61006d;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 body {
+  font-family: monospace;
+  font-size: 15px;
   background-color: var(--body-color);
+}
+
+.layoutContent {
+  padding: 50px;
+  display: grid;
+  grid-template-areas:
+    'nav'
+    'main';
+}
+
+.main {
+  grid-area: main;
 }

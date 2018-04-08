@@ -42,7 +42,7 @@ ReactDOM.render(
             },
           ]}
         />
-        <main>
+        <main className={styles.main}>
           <Switch>
             {routes.map((route, i) => (
               <Route key={i} {...route} />

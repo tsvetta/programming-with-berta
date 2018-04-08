@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 185px;
+  min-height: 192px;
+  max-width: 600px;
+}
+
+.berta {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bubble {
+  position: relative;
+  background-color: var(--bubbles-color);
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: lime;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 11px;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid var(--bubbles-color);
+    border-bottom: 12px solid transparent;
+    transform: rotate(-45deg);
+  }
+}
