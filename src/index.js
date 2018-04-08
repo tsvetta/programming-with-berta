@@ -26,7 +26,7 @@ export const routes = [
     exact: true,
   },
   {
-    component: ErrorPage,
+    component: HomePage,
   },
 ];
 
