@@ -1,4 +1,21 @@
 .content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialogButton {
+  background-color: lime;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 0px 0px #000;
+  transform: translate3d(0, 0, 0);
+
+  &:hover {
+    background-color: #00e000;
+  }
+
+  &:active {
+    transform: translate3d(1px, 1px, 0);
+    box-shadow: none;
+  }
 }

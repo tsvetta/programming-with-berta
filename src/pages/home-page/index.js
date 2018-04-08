@@ -13,6 +13,9 @@ class HomePage extends React.PureComponent {
           <BertaSays
             phrase="Hi! I'm Berta the Dog!"
           />
+          <button type='button' className={styles.dialogButton}>
+            What's up Berta?
+          </button>
         </div>
       </Page>
     );

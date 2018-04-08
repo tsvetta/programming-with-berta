@@ -1,12 +1,14 @@
 :global(:root) {
   --body-color: #fff;
-  --bubbles-color: #61006d;
+  --bubbles-color: #ff008d;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: monospace;
+  font-size: 15px;
 }
 
 ul,
@@ -14,9 +16,12 @@ ol {
   list-style: none;
 }
 
+button {
+  border: none;
+  display: inline-block;
+}
+
 body {
-  font-family: monospace;
-  font-size: 15px;
   background-color: var(--body-color);
 }
 

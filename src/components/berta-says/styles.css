@@ -18,13 +18,13 @@
   background-color: var(--bubbles-color);
   padding: 10px 25px;
   border-radius: 10px;
-  color: lime;
+  color: white;
 
   &::before {
     content: '';
     position: absolute;
     display: block;
-    top: 11px;
+    top: 12px;
     left: -4px;
     width: 0;
     height: 0;
