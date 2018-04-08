@@ -34,14 +34,14 @@ ReactDOM.render(
   <Router basename='/programming-with-berta'>
     <Layout>
       <div className={styles.layoutContent}>
-        <Navigation
+        {/* <Navigation
           routes={[
             {
               to: paths.home,
               text: 'woof!',
             },
           ]}
-        />
+        /> */}
         <main className={styles.main}>
           <Switch>
             {routes.map((route, i) => (
