@@ -18,6 +18,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
+    publicPath: IS_PRODUCTION ? '/programming-with-berta/' : '/',
     path: path.resolve(__dirname, 'docs'),
   },
   resolve: {
