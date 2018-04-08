@@ -26,12 +26,12 @@ export const routes = [
     exact: true,
   },
   {
-    component: HomePage,
+    component: ErrorPage,
   },
 ];
 
 ReactDOM.render(
-  <Router>
+  <Router basename='/programming-with-berta'>
     <Layout>
       <div className={styles.layoutContent}>
         <Navigation
