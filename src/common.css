@@ -1,0 +1,11 @@
+:global(:root) {
+  --body-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+}
