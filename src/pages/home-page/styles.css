@@ -5,6 +5,7 @@
 }
 
 .dialogButton {
+  margin: 20px 0;
   background-color: lime;
   padding: 10px 20px;
   box-shadow: 2px 2px 0px 0px #000;
