@@ -7,6 +7,10 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import Provider from 'Redux/provider';
+import { createStore } from 'Redux/store';
+import { reducer } from 'Redux/reducers';
+
 import HomePage from 'Pages/home-page';
 import ErrorPage from 'Pages/error-page';
 
@@ -30,27 +34,31 @@ export const routes = [
   },
 ];
 
+const appStore = createStore(reducer);
+
 ReactDOM.render(
-  <Router basename='/programming-with-berta'>
-    <Layout>
-      <div className={styles.layoutContent}>
-        {/* <Navigation
-          routes={[
-            {
-              to: paths.home,
-              text: 'woof!',
-            },
-          ]}
-        /> */}
-        <main className={styles.main}>
-          <Switch>
-            {routes.map((route, i) => (
-              <Route key={i} {...route} />
-            ))}
-          </Switch>
-        </main>
-      </div>
-    </Layout>
-  </Router>,
+  <Provider store={appStore}>
+    <Router basename='/programming-with-berta'>
+      <Layout>
+        <div className={styles.layoutContent}>
+          {/* <Navigation
+            routes={[
+              {
+                to: paths.home,
+                text: 'woof!',
+              },
+            ]}
+          /> */}
+          <main className={styles.main}>
+            <Switch>
+              {routes.map((route, i) => (
+                <Route key={i} {...route} />
+              ))}
+            </Switch>
+          </main>
+        </div>
+      </Layout>
+    </Router>
+  </Provider>,
   document.getElementById('app')
 );

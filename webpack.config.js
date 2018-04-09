@@ -24,6 +24,7 @@ module.exports = {
   resolve: {
     alias: {
       Root: path.resolve(__dirname, 'src/'),
+      Redux: path.resolve(__dirname, 'src/redux/'),
       Berta: path.resolve(__dirname, 'src/BERTA/'),
       Components: path.resolve(__dirname, 'src/components/'),
       Pages: path.resolve(__dirname, 'src/pages/'),
