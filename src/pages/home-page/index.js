@@ -1,7 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 
 import Page from 'Pages/page';
 import BertaSays from 'Components/berta-says';
+import Button from 'UI/button';
 
 import styles from './styles.css';
 
@@ -34,9 +35,12 @@ class HomePage extends React.PureComponent {
       <Page>
         <div className={styles.content}>
           <BertaSays phrase={DIALOG[this.state.counter].Berta} />
-          <button type='button' className={styles.dialogButton} onClick={this.nextPhrase}>
+          <Button
+            type='button'
+            onClick={this.nextPhrase}
+          >
             {DIALOG[this.state.counter].you}
-          </button>
+          </Button>
         </div>
       </Page>
     );

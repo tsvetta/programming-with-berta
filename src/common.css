@@ -1,6 +1,7 @@
 :global(:root) {
   --body-color: #fff;
   --bubbles-color: #ff008d;
+  --shadow: 2px 2px 0px 0px #000;
 }
 
 * {

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import BertaHead from 'Berta/BERTA.png'
 
 import styles from './styles.css';

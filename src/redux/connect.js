@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const noop = () => { };
@@ -9,6 +9,10 @@ const connect = (mapStateToProps = noop, mapDispatchToProps = noop) => {
       componentDidMount() {
         const { store } = this.context;
         this.unsubscribe = store.subscribe(this.handleChange)
+      }
+
+      componentWillUnmount() {
+        this.unsubscribe();
       }
 
       render() {

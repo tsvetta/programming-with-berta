@@ -27,6 +27,7 @@ module.exports = {
       Redux: path.resolve(__dirname, 'src/redux/'),
       Berta: path.resolve(__dirname, 'src/BERTA/'),
       Components: path.resolve(__dirname, 'src/components/'),
+      UI: path.resolve(__dirname, 'src/ui/'),
       Pages: path.resolve(__dirname, 'src/pages/'),
       HOCS: path.resolve(__dirname, 'src/HOCs/'),
     },

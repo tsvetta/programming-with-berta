@@ -1,0 +1,16 @@
+.button {
+  margin: 20px 0;
+  background-color: lime;
+  padding: 10px 20px;
+  box-shadow: var(--shadow);
+  transform: translate3d(0, 0, 0);
+
+  &:hover {
+    background-color: #00e000;
+  }
+
+  &:active {
+    transform: translate3d(1px, 1px, 0);
+    box-shadow: none;
+  }
+}
