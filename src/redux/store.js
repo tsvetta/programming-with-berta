@@ -2,6 +2,7 @@ import { reducer } from './reducers';
 import { actionTypes } from './actions';
 
 export const BertaDefaultStoreState = {
+  skillsHidden: true,
   skills: {
     html: 0,
     css: 0,

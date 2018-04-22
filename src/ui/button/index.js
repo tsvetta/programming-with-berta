@@ -11,7 +11,7 @@ class Button extends React.PureComponent {
       <button
         type={props.type}
         className={styles.button}
-        onClick={this.nextPhrase}
+        onClick={props.onClick}
       >
         {props.children}
       </button>

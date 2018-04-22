@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "jest",
+    "update-snaps": "jest -u",
     "build": "NODE_ENV=production webpack -p",
     "eslint": "eslint ./src",
     "eslint-fix": "eslint --fix ./src",

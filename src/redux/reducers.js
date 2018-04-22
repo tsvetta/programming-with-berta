@@ -1,6 +1,19 @@
 import { actionTypes } from './actions';
 import { createStore, BertaDefaultStoreState } from './store';
 
+const skillsHiddenReducer = (skillsHiddenState = BertaDefaultStoreState.skillsHidden, action) => {
+  switch (action.type) {
+    case actionTypes.SHOW_SKILLS:
+      return false;
+
+    case actionTypes.HIDE_SKILLS:
+      return true;
+
+    default:
+      return skillsHiddenState;
+  }
+}
+
 const skillsReducer = (skillsState = BertaDefaultStoreState.skills, action) => {
   switch (action.type) {
     case actionTypes.INCREASE_SKILL_HTML:
@@ -34,6 +47,7 @@ const skillsReducer = (skillsState = BertaDefaultStoreState.skills, action) => {
 
 export const reducer = (state = BertaDefaultStoreState, action) => {
   return {
+    skillsHidden: skillsHiddenReducer(state.skillsHidden, action),
     skills: skillsReducer(state.skills, action),
   };
 };

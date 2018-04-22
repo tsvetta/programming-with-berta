@@ -1,7 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as R from 'ramda';
 
 const noop = () => { };
+
+export const bindActionCreators = (dispatch, actionCreators) => {
+  const bindActionCreator = (actionCreator) => {
+    return (...args) => dispatch(actionCreator(...args))
+  };
+
+  return R.map(bindActionCreator, actionCreators)
+}
 
 const connect = (mapStateToProps = noop, mapDispatchToProps = noop) => {
   return (Component) => {
@@ -17,12 +26,15 @@ const connect = (mapStateToProps = noop, mapDispatchToProps = noop) => {
 
       render() {
         const { store } = this.context;
+        const actionProps = typeof mapDispatchToProps === 'function'
+          ? mapDispatchToProps(store.dispatch, this.props)
+          : bindActionCreators(store.dispatch, mapDispatchToProps);
 
         return (
           <Component
             {...this.props}
             {...mapStateToProps(store.getState(), this.props)}
-            {...mapDispatchToProps(store.dispatch, this.props)}
+            {...actionProps}
           />
         );
       }

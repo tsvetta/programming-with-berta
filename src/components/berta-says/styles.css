@@ -20,6 +20,7 @@
   padding: 10px 25px;
   border-radius: 10px;
   color: white;
+  box-shadow: var(--shadow);
 
   &::before {
     content: '';
